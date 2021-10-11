@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Z80EmulatorLib", "Z80EmulatorLib\Z80EmulatorLib.csproj", "{AEA0AB25-F4BE-45AB-92B2-BB69C4A1D551}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Z80Emulator.Tests", "Z80Emulator.Tests\Z80Emulator.Tests.csproj", "{B64C171B-78DE-4C8A-B0D1-381E18ECBC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z80EmulatorConsoleApp", "Z80EmulatorConsoleApp\Z80EmulatorConsoleApp.csproj", "{E203AC58-9309-4773-8CCE-B421DDB63F7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEA0AB25-F4BE-45AB-92B2-BB69C4A1D551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA0AB25-F4BE-45AB-92B2-BB69C4A1D551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA0AB25-F4BE-45AB-92B2-BB69C4A1D551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA0AB25-F4BE-45AB-92B2-BB69C4A1D551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64C171B-78DE-4C8A-B0D1-381E18ECBC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64C171B-78DE-4C8A-B0D1-381E18ECBC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64C171B-78DE-4C8A-B0D1-381E18ECBC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64C171B-78DE-4C8A-B0D1-381E18ECBC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E203AC58-9309-4773-8CCE-B421DDB63F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E203AC58-9309-4773-8CCE-B421DDB63F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E203AC58-9309-4773-8CCE-B421DDB63F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E203AC58-9309-4773-8CCE-B421DDB63F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BC352E2-87E2-4B13-8542-566E2759B1CB}
+	EndGlobalSection
+EndGlobal
