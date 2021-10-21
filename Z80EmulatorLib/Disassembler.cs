@@ -140,30 +140,29 @@ namespace PendleCodeMonkey.Z80EmulatorLib
 			var instruction = Machine.Decoder.FetchInstruction();
 
 			string opCode = instruction.Info.Mnemonic;
-			if (instruction.Info.AddrMode1 == AddrMode.Immediate)
+			if (instruction.Info.AddrMode1 == AddrMode.Immediate || instruction.Info.AddrMode2 == AddrMode.Immediate)
 			{
 				opCode = opCode.Replace("n", $"{instruction.ByteOperand:X2}h");
 			}
-			else if (instruction.Info.AddrMode1 == AddrMode.Relative)
+			if (instruction.Info.AddrMode1 == AddrMode.Relative || instruction.Info.AddrMode2 == AddrMode.Relative)
 			{
 				var d = (sbyte)instruction.Displacement;
 				if (opCode.Contains('e'))
 				{
-					var e = d > 0 ? d + 2 : d - 2;
 					ushort address = (ushort)(Machine.CPU.PC + d);
-					opCode = opCode.Replace("e", $"${e:+0;-#}");
-					opCode += $"    ; {address:X4}h";
+					opCode = opCode.Replace("e", $"{address:X4}h");
 				}
 				else
 				{
 					opCode = opCode.Replace("+d", $"{d:+0;-#}");
 				}
 			}
-			else if (instruction.Info.AddrMode1 == AddrMode.ExtendedImmediate)
+			if (instruction.Info.AddrMode1 == AddrMode.ExtendedImmediate || instruction.Info.AddrMode2 == AddrMode.ExtendedImmediate)
 			{
 				opCode = opCode.Replace("nn", $"{instruction.WordOperand:X4}h");
 			}
 
+			// (IX+0) and (IY+0) are output as just (IX) and (IY) respectively.
 			opCode = opCode.Replace("(IX+0)", "(IX)");
 			opCode = opCode.Replace("(IY+0)", "(IY)");
 

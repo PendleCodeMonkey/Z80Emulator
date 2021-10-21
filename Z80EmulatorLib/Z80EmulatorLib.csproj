@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>PendleCodeMonkey.Z80EmulatorLib</RootNamespace>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
 </Project>
